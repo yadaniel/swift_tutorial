@@ -244,6 +244,23 @@ n1: for i in 1...10 {
 
 }
 
+let lines = """
+    line1
+    line2
+    line3
+"""
+print("lines.count() = ", lines.count, "chars")
+let l: [Substring] = lines.split(separator: " ")
+for line in lines.split(separator: " ") {
+    print(line)
+}
+for (idx,line) in lines.split(separator: " ").enumerated() {
+    print(idx, " => ", line)
+}
+/* for char in lines { */
+    /* print(line) */
+/* } */
+
 func main() {
     test_class()
     test_struct()
